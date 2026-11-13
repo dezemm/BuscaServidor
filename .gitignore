@@ -1,0 +1,18 @@
+# Arquivos locais de compilação e IDE
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Materiais locais de testes; manter os scripts de compilação
+/build/*
+!/build/compilar.ps1
+!/build/compilar-comprimido.ps1
+!/build/converter-icone.ps1
+
+# Outras saídas locais
+/Aplicativo-Comprimido/
+/Aplicativo-Leve/
+/Transferencia-Compacta/

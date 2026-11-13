@@ -1,0 +1,7 @@
+# Preservar os bytes e finais de linha dos arquivos enviados.
+* -text
+*.exe binary
+*.pdf binary
+*.png binary
+*.ico binary
+*.zip binary

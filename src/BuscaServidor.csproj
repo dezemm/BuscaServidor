@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>BuscaServidor</AssemblyName>
+    <Version>2.2.0</Version>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>assets\icone.ico</ApplicationIcon>
+    <Product>Busca Servidor - Suporte</Product>
+    <Title>Busca Servidor - Suporte</Title>
+    <AssemblyTitle>Busca Servidor - Suporte</AssemblyTitle>
+    <Description>Localizador de serviços MySQL/MariaDB para suporte aos terminais</Description>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TestBuild)' == 'true'"><DefineConstants>$(DefineConstants);TEST_BUILD</DefineConstants></PropertyGroup>
+  <ItemGroup Condition="'$(TestBuild)' != 'true'"><Compile Remove="SelfTest.cs" /><Compile Remove="VpnTests.cs" /><Compile Remove="ProbeTests.cs" /><Compile Remove="FirewallTests.cs" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="assets\icone.ico" LogicalName="BuscaServidor.AppIcon" /></ItemGroup>
+</Project>
